@@ -1,0 +1,230 @@
+.section {
+  background: var(--bg);
+  padding: 8rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(37,99,235,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  background: var(--tag-bg);
+  border: 1px solid var(--tag-border);
+  color: var(--tag-color);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.6rem;
+}
+
+.sub {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* ── Table wrapper ── */
+.tableWrap {
+  overflow-x: auto;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+  font-size: 0.875rem;
+}
+
+/* ── Header row ── */
+.table thead tr {
+  background: var(--bg-2);
+}
+
+.featureCol {
+  text-align: left;
+  padding: 1.5rem 1.5rem 1.25rem;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 700;
+  width: 26%;
+  border-bottom: 1px solid var(--border);
+}
+
+.planCol {
+  text-align: center;
+  padding: 1.25rem 1rem;
+  border-bottom: 1px solid var(--border);
+  border-left: 1px solid var(--border-2);
+  vertical-align: top;
+}
+
+.planHighlight {
+  background: rgba(37, 99, 235, 0.10);
+  border-left: 1px solid rgba(37, 99, 235, 0.30);
+  border-right: 1px solid rgba(37, 99, 235, 0.30);
+}
+
+.planProPlus {
+  background: rgba(6, 182, 212, 0.08);
+  border-left: 1px solid rgba(6, 182, 212, 0.25);
+  border-right: 1px solid rgba(6, 182, 212, 0.25);
+}
+
+.planEnterprise {
+  background: rgba(139, 92, 246, 0.08);
+  border-left: 1px solid rgba(139, 92, 246, 0.25);
+  border-right: 1px solid rgba(139, 92, 246, 0.25);
+}
+
+.planName {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  margin-bottom: 0.4rem;
+}
+
+.planHighlight .planName  { color: #3b82f6; }
+.planProPlus .planName    { color: #06b6d4; }
+.planEnterprise .planName { color: #a78bfa; }
+
+.planPrice {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.9rem;
+  line-height: 1;
+}
+
+.planPeriod {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-dim);
+  letter-spacing: 0;
+}
+
+.planBtn {
+  display: inline-block;
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+  white-space: nowrap;
+}
+
+.planBtn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.planBtnPrimary {
+  background: var(--grad-blue-green);
+  color: #fff;
+}
+
+.planBtnSecondary {
+  background: var(--border);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+.planBtnProPlus {
+  background: rgba(6, 182, 212, 0.15);
+  color: #22d3ee;
+  border: 1px solid rgba(6, 182, 212, 0.35);
+}
+
+.planBtnEnterprise {
+  background: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+/* ── Body rows ── */
+.rowEven { background: var(--bg-2); }
+.rowOdd  { background: var(--bg); }
+
+.table tbody tr:last-child .featureCell,
+.table tbody tr:last-child .valueCell {
+  border-bottom: none;
+}
+
+.featureCell {
+  padding: 0.85rem 1.5rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--border-2);
+  border-right: 1px solid var(--border-2);
+}
+
+.valueCell {
+  text-align: center;
+  padding: 0.85rem 1rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--border-2);
+  border-left: 1px solid var(--border-2);
+}
+
+.colHighlight {
+  background: rgba(37, 99, 235, 0.06);
+  border-left: 1px solid rgba(37, 99, 235, 0.18);
+  border-right: 1px solid rgba(37, 99, 235, 0.18);
+}
+
+.colProPlus {
+  background: rgba(6, 182, 212, 0.05);
+  border-left: 1px solid rgba(6, 182, 212, 0.18);
+  border-right: 1px solid rgba(6, 182, 212, 0.18);
+}
+
+.colEnterprise {
+  background: rgba(139, 92, 246, 0.05);
+  border-left: 1px solid rgba(139, 92, 246, 0.18);
+  border-right: 1px solid rgba(139, 92, 246, 0.18);
+}
+
+/* value colouring */
+.cellNo  { color: var(--text-faint); }
+.cellYes { color: var(--green-light); font-weight: 600; }
+
+@media (max-width: 768px) {
+  .section { padding: 6rem 1rem; }
+  .table { font-size: 0.78rem; min-width: 600px; }
+  .featureCell { padding: 0.75rem 1rem; }
+  .valueCell   { padding: 0.75rem 0.6rem; }
+}
